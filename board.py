@@ -15,5 +15,17 @@ def initial_board():
 
 
 def move_piece(board, start, end):
-    board[end[0]][end[1]] = board[start[0]][start[1]]
-    board[start[0]][start[1]] = "."
+    sr, sc = start
+    er, ec = end
+
+    piece = board[sr][sc]
+
+    # Remove the captured piece when a jump occurs
+    if abs(er - sr) == 2 and abs(ec - sc) == 2:
+        mr = (sr + er) // 2
+        mc = (sc + ec) // 2
+        board[mr][mc] = "."
+
+    # Move the piece to its destination
+    board[er][ec] = piece
+    board[sr][sc] = "."
