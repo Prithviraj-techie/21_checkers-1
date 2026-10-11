@@ -118,18 +118,18 @@ class Checkers:
                     end
                 )
             ):
-                print(
-                    "Another capture is available. "
-                    "Continue with the same piece."
-                )
-                continue
+               print(
+                        f"Another capture is available for {end}. "
+                        f"Continue with the same piece."
+                    )
+            continue
 
             # --------------------------------------------------
             # SWITCH PLAYER
             # --------------------------------------------------
 
             self.player = "B" if self.player == "R" else "R"
-
+            
             # --------------------------------------------------
             # WIN CONDITION: NO PIECES
             # --------------------------------------------------
