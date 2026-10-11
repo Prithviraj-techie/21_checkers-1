@@ -129,7 +129,7 @@ class Checkers:
             # --------------------------------------------------
 
             self.player = "B" if self.player == "R" else "R"
-            
+            print(f"Next turn: {self.player}")
             # --------------------------------------------------
             # WIN CONDITION: NO PIECES
             # --------------------------------------------------
